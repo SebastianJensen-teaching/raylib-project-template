@@ -62,8 +62,8 @@ void (*state_enter_funcs[])(i32, i32) = {
 };
 
 i32 (*state_exit_funcs[])() = {
-    NULL, // developer menu
-    NULL};
+    NULL,  // developer menu
+    NULL}; // quit
 
 i32 state_exit(game_state_e state)
 {
@@ -118,7 +118,7 @@ void load_resources()
 
 void window_init()
 {
-    InitWindow(0, 0, "Sphere City Prototype");
+    InitWindow(0, 0, "Raylib Project Template");
     SetTargetFPS(GetMonitorRefreshRate(GetCurrentMonitor()));
 
     game_state.fullscreen_width = GetScreenWidth();
